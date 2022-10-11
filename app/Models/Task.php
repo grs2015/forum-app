@@ -3,9 +3,11 @@
 namespace App\Models;
 
 use Illuminate\Support\Str;
+use Spatie\LaravelData\WithData;
+use App\DataTransferObjects\TaskData;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Task extends Model
 {

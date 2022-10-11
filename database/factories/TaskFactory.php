@@ -19,7 +19,6 @@ class TaskFactory extends Factory
         return [
             'title' => $this->faker->sentence(3),
             'description' => $this->faker->text(),
-            'due_date' => $this->faker->dateTimeBetween('now', '+4 weeks')
         ];
     }
 }
