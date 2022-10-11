@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::name('public.')->group(function() {
+    Route::get('/', [ App\Http\Controllers\TaskController::class, 'index' ])->name('index');
+    Route::resource('task', App\Http\Controllers\TaskController::class )->except('index');
 });
+
