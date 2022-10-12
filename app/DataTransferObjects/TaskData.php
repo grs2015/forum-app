@@ -38,7 +38,7 @@ class TaskData extends Data
     public static function rules(Request $request): array
     {
         return [
-            'title' => ['required', 'string', Rule::unique('posts')->ignore($request->id)],
+            'title' => ['required', 'string', Rule::unique('tasks')->ignore($request->id)],
             'description' => ['nullable', 'sometimes', 'string'],
         ];
     }
