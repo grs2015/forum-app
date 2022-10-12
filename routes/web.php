@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::name('public.')->group(function() {
-    Route::get('/', [ App\Http\Controllers\TaskController::class, 'index' ])->name('index');
+    Route::get('/', [ App\Http\Controllers\TaskController::class, 'index'])->name('index');
     Route::resource('tasks', App\Http\Controllers\TaskController::class )->except('index');
 });
 

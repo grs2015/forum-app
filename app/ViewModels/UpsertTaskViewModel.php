@@ -17,6 +17,8 @@ class UpsertTaskViewModel extends ViewModel
             return null;
         }
 
-        return TaskData::from($this->task);
+        $es = TaskData::from($this->task);
+
+        return $es;
     }
 }

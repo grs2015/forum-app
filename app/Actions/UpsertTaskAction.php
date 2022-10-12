@@ -11,7 +11,7 @@ class UpsertTaskAction
     public static function execute(TaskData $data)
     {
         if (!$data->id) {
-            DB::insert('insert into tasks (title, description) values (?, ?)', [$data->title, $data->description]);
+            DB::insert('insert into tasks (title, description, slug) values (?, ?, ?)', [$data->title, $data->description, $data->slug]);
             return;
             // $id = DB::select('select id from tasks order by id desc LIMIT 1')[0]->id;
             // $task = DB::select('select * from tasks where id = ?', [$id])[0];

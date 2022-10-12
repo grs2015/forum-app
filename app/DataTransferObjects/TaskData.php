@@ -40,6 +40,7 @@ class TaskData extends Data
         return [
             'title' => ['required', 'string', Rule::unique('tasks')->ignore($request->id)],
             'description' => ['nullable', 'sometimes', 'string'],
+            'slug' => ['nullable', 'sometimes', 'string']
         ];
     }
 }
